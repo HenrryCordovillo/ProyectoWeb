@@ -1,0 +1,4 @@
+Instlar lo siguiente en la carpeta backend antes de iniciar
+
+npm install body-parser connect-multiparty express mongoose
+npm install nodemon --save-dev
