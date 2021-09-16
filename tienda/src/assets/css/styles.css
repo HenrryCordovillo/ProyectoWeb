@@ -1,0 +1,12 @@
+body{
+  background-image: url("../img/2.jpg");
+}
+.imagenes{
+  width: 35%;
+  margin: 20px;
+}
+
+.logo{
+  width: 5%;
+  border-radius: 60%;
+}

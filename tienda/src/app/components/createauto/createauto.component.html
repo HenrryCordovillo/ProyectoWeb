@@ -1,0 +1,48 @@
+<h2 class="container">{{titulo}}</h2>
+<br>
+<div class="container row">
+  <form #autoForm="ngForm" (ngSubmit)="guardarAuto(autoForm)">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+      <label class="form-label" for="fabricante">Fabricante</label>
+      <input type="text" class="form-control" name="fabricante" #fabricante="ngModel" [(ngModel)]="auto.fabricante" required/>
+      <span class="" *ngIf="fabricante.touched && !fabricante.valid">
+            Fabricante obligatorio
+        </span>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+      <label class="form-label" for="nombre">Nombre</label>
+      <input class="form-control" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="auto.nombre" required/>
+      <span class="" *ngIf="nombre.touched && !nombre.valid">
+            Modelo obligatorio
+        </span>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+      <label class="form-label" for="tipo">Tipo</label>
+      <input class="form-control" type="text" name="tipo" #tipo="ngModel" [(ngModel)]="auto.tipo" required/>
+      <span class="" *ngIf="precio.touched && !precio.valid">
+            Tipo obligatorio
+        </span>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <label class="form-label" for="precio">Precio</label>
+      <input  class="form-control" type="number" name="precio" #precio="ngModel" [(ngModel)]="auto.precio" required/>
+      <span class="" *ngIf="precio.touched && !precio.valid">
+            Precio obligatorio
+        </span>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <label class="form-label" for="imagen">Imagen</label>
+      <span class="" *ngIf="auto.imagen" style="float: left;">
+            <img src="{{url+'get-imagen/'+auto.imagen}}" style="width: 100px;">
+        </span>
+      <input   type="file" #archivoImagen placeholder="Seleccionar imagen" (change)="imagenChangeEvent($event)"/>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <input class="btn btn-primary" type="submit" value="Guardar" [disabled]="!autoForm.form.valid"/>
+    </div>
+
+
+  </form>
+</div>
+

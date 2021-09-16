@@ -1,0 +1,33 @@
+
+
+
+
+<form class="d-flex"  #autoForm="ngForm" (ngSubmit)="getAutoNombre('Capitan Tsubasa')">
+  <input class="form-control me-2" name="nombre" type="text" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success"  type="submit">Buscar</button>
+</form>
+<div>
+  <table class="table table-bordered border-primary text-center">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Fabricante</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Precio</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><img class="imagenes " WIDTH="550" src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen"></td>
+      <td>{{auto.fabricante}}</td>
+      <td>{{auto.nombre}}</td>
+      <td>{{auto.tipo}}</td>
+      <td>{{auto.precio}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>

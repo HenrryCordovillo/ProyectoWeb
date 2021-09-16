@@ -1,0 +1,35 @@
+<div>
+  <table class="table table-bordered border-primary text-center">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Fabricante</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Precio</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><img class="imagenes " WIDTH="550" src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen"></td>
+      <td>{{auto.fabricante}}</td>
+      <td>{{auto.nombre}}</td>
+      <td>{{auto.tipo}}</td>
+      <td>{{auto.precio}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+
+        <a class="btn btn-primary" [routerLink]="['/editar-auto',auto._id]">Editar</a>
+
+  <br>
+
+        <a class="btn btn-danger" (click)="borrarAuto(auto._id)">Borrar</a>
+
+</div>

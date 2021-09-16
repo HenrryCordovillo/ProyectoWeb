@@ -1,0 +1,31 @@
+<h2 CLASS="container">JUEGOS DISPONIBLES</h2>
+
+
+<div>
+  <table class="table table-bordered border-primary ">
+    <thead>
+    <tr>
+
+      <th class="text-center" scope="col">Imagen</th>
+      <th class="text-center" scope="col">Nombre</th>
+      <th class="text-center" scope="col">Precio</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr scope="col" *ngFor="let auto of autos">
+      <td WIDTH="550" class="text-center">
+        <a [routerLink]="['/auto',auto._id]">
+          <img  class="imagenes" src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen">
+      </a>
+      </td>
+
+      <td class="text-center">{{auto.nombre}}</td>
+      <td class="text-center">${{auto.precio}}</td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+</div>
