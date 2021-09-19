@@ -26,7 +26,7 @@ export class CreateautoComponent implements OnInit {
     private _autoService:AutoService,
     private _cargarService:CargarService
   ) {
-    this.titulo="Guardar Juego";
+    this.titulo="GUARDAR PRODUCTO";
     this.url=Global.url;
     this.auto=new Auto('','','','',50,"");
     this.autoGuardar=new Auto('','','','',25,"");
