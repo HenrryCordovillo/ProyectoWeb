@@ -39,7 +39,7 @@ export class EliminarProductoComponent implements OnInit {
     this._autoService.deleteAuto(id).subscribe(
       response=>{
         if(response.auto){
-          this._router.navigate(['/autos']);
+          this.getAutos();
         }
       },
       error=>{

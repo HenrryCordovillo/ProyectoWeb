@@ -10,7 +10,7 @@
       <div class="card-body">
         <h5 class="card-title">{{auto.nombre}}</h5>
         <p class="card-text">{{auto.precio}}</p>
-        <a class="btn btn-danger" [routerLink]="['eliminar']" (click)="borrarAuto(auto._id)">Borrar</a>
+        <a class="btn btn-danger" (click)="borrarAuto(auto._id)">Borrar</a>
       </div>
     </div>
   </div>
