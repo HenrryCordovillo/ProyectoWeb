@@ -1,0 +1,16 @@
+<h1 class="text-center">Clientes </h1>
+
+
+<div class="card mb-3 " style="max-width: 540px;" *ngFor="let cliente of clientes">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <div class="card-body">
+        <!-- <a [routerLink]="['/auto',cliente._id]">
+           
+        </a> -->
+        <h5 class="card-title">{{cliente.nombre}}</h5>
+        <p class="card-text">{{cliente.apellido}}</p>
+      </div>
+    </div>
+  </div>
+</div>

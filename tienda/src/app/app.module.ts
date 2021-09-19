@@ -13,6 +13,7 @@ import { EditarComponent } from './components/editar/editar.component';
 import { BarraMenuComponent } from './components/barra-menu/barra-menu.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EliminarProductoComponent } from './components/eliminar-producto/eliminar-producto.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EliminarProductoComponent } from './components/eliminar-producto/elimin
     EditarComponent,
     BarraMenuComponent,
     SidebarComponent,
-    EliminarProductoComponent
+    EliminarProductoComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
