@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost:27017/gizpirit')
     .then(()=>{
         console.log("Conexion establecida con la bdd");
         app.listen(port,()=>{
-            console.log("Conexion establecida en el url:localhost:3700");
+            console.log("Conexion establecida en el url:localhost: "+ port);
         })
     })
     .catch(err=>console.log(err));

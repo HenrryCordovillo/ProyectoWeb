@@ -1,6 +1,7 @@
 'use strict'
 var express=require('express');
 var ConsecionarioController=require('../controllers/tienda');
+var ConsecionarioControllerCliente=require('../controllers/cliente');
 var multipart=require('connect-multiparty');
 var multiPartMiddleware=multipart({uploadDir:'./uploads'})
 
@@ -21,4 +22,11 @@ router.post('/subir-imagen/:id',multiPartMiddleware,ConsecionarioController.uplo
 router.get('/get-imagen/:imagen',ConsecionarioController.getImagen);
 //buscar por nombre
 router.get('/auto-nombre/:id',ConsecionarioController.getAutoNombre);
+
+
+router.get('/clientes',ConsecionarioControllerCliente.getClientes);
+router.post('/guardar-cliente',ConsecionarioControllerCliente.saveCliente);
+router.get('/cliente/:id',ConsecionarioControllerCliente.getCliente);
+router.put('/cliente/:id',ConsecionarioControllerCliente.updateCliente);
+router.delete('/cliente/:id',ConsecionarioControllerCliente.deleteCliente);
 module.exports=router;
