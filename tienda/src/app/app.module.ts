@@ -12,6 +12,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { BarraMenuComponent } from './components/barra-menu/barra-menu.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { EliminarProductoComponent } from './components/eliminar-producto/eliminar-producto.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ContactoComponent,
     EditarComponent,
     BarraMenuComponent,
-    SidebarComponent
+    SidebarComponent,
+    EliminarProductoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<h1 class="text-center">Eliminiar producto</h1>
+
+
+<div class="card mb-3 " style="max-width: 540px;" *ngFor="let auto of autos">
+  <div class="row g-0">
+    <div class="col-md-4">
+            <img  class="img-fluid rounded-start" src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{auto.nombre}}</h5>
+        <p class="card-text">{{auto.precio}}</p>
+        <a class="btn btn-danger" [routerLink]="['eliminar']" (click)="borrarAuto(auto._id)">Borrar</a>
+      </div>
+    </div>
+  </div>
+</div>
