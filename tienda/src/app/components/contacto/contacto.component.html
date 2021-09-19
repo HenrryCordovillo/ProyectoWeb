@@ -2,12 +2,9 @@
   <p>Busqueda</p>
   <p class="article">
   <label for="nombre">BUSQUEDA: </label>
-  <input class="form-label" type="text" name="nombre" >
+  <input class="form-label" type="text" #nombre>
   </p>
-
-  <p >
-
-    <button type="submit" class="btn btn-primary">Buscar</button>
-
+  <p >    
+    <a class="btn btn-primary" [routerLink]="['/busqueda', nombre.value]" role="button" >Buscar</a>
   </p>
 </form>

@@ -14,6 +14,7 @@ import { BarraMenuComponent } from './components/barra-menu/barra-menu.component
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EliminarProductoComponent } from './components/eliminar-producto/eliminar-producto.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ClientesComponent } from './components/clientes/clientes.component';
     BarraMenuComponent,
     SidebarComponent,
     EliminarProductoComponent,
-    ClientesComponent
+    ClientesComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ var controller={
         Auto.find({}).sort().exec((err,autos)=>{
             if(err) return res.status(500).send({message:'Error en recuperar los datos'});
             if(!autos) return res.status(404).send({message:'No hay autos para mostrar'});
+            if(autos.length<=0) return res.status(404).send({message:'No hay autos para mostrar'});
             return  res.status(200).send({autos});
         });
     },
@@ -40,19 +41,15 @@ var controller={
         });
     },
 
-    getAutoNombre:function(req,res){
-        var autoId=req.params.id;
-        if(autoId==null) return res.status(404).send({message:autoId+' No existe nombre'});
-
-        Auto.findOne({'nombre':autoId} ,(err,auto)=>{
-            if(err) return res.status(500).send({message:autoId+ 'Error en recuperar los datos'});
-            if(!auto) return res.status(404).send({message:'El auto no existe'});
-            return res.status(200).send({auto});
+    getAutosNombres:function (req,res){
+        var autoNombre=req.params.nombre;
+        Auto.find({'nombre':autoNombre}).sort().exec((err,autos)=>{
+            if(err) return res.status(500).send({message:'Error en recuperar los datos'});
+            if(!autos) return res.status(404).send({message:'No hay autos para mostrar'});
+            if(autos.length<=0) return res.status(404).send({message:'No hay autos para mostrar'});
+            return  res.status(200).send({autos});
         });
     },
-
-
-
 
 
     updateAuto:function(req,res){

@@ -7,6 +7,7 @@ import { DetalleautoComponent } from './components/detalleauto/detalleauto.compo
 import {EditarComponent } from './components/editar/editar.component';
 import {BarraMenuComponent} from "./components/barra-menu/barra-menu.component";
 import { EliminarProductoComponent } from './components/eliminar-producto/eliminar-producto.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 const routes: Routes = [
   {path:'autos',component:AutosComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'auto-nombre',component:BarraMenuComponent},
   {path:'eliminarAuto',component:EliminarProductoComponent},
   {path:'clientes',component:ClientesComponent},
+  {path:'busqueda/:nombre',component:BusquedaComponent},
 ];
 
 @NgModule({

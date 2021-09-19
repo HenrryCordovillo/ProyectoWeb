@@ -32,15 +32,15 @@ export class BarraMenuComponent implements OnInit {
 
 
 
-  getAutoNombre(id:string){
-    this._autoService.getAutoNombre(id).subscribe(
-      response=>{
-        this.auto=response.auto;
-      },
-      error=>{
-        console.log(<any>error);
-      }
-    );
-  }
+  // getAutoNombre(id:string){
+  //   this._autoService.getAutoNombre(id).subscribe(
+  //     response=>{
+  //       this.auto=response.auto;
+  //     },
+  //     error=>{
+  //       console.log(<any>error);
+  //     }
+  //   );
+  // }
 
 }

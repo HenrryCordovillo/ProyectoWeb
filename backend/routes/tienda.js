@@ -21,7 +21,7 @@ router.post('/subir-imagen/:id',multiPartMiddleware,ConsecionarioController.uplo
 //obtener imagen o recuperar
 router.get('/get-imagen/:imagen',ConsecionarioController.getImagen);
 //buscar por nombre
-router.get('/auto-nombre/:id',ConsecionarioController.getAutoNombre);
+router.get('/autoNombre/:nombre',ConsecionarioController.getAutosNombres);
 
 
 router.get('/clientes',ConsecionarioControllerCliente.getClientes);

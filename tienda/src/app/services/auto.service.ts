@@ -44,9 +44,9 @@ export class AutoService{
         return this._http.delete(this.url+'auto/'+id,{headers:headers});
     }
 
-  getAutoNombre(id:String):Observable<any>{
+  getAutoNombres(nombre:String):Observable<any>{
     let headers=new HttpHeaders().set('Content-Type','application/json');
-    return this._http.get(this.url+'auto-nombre/'+id,{headers:headers});
+    return this._http.get(this.url+'autoNombre/'+nombre,{headers:headers});
   }
 
 
