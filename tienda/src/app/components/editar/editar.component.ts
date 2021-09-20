@@ -27,7 +27,7 @@ export class EditarComponent implements OnInit {
 
   ) {
     this.url=Global.url;
-    this.titulo="Editar Juego";
+    this.titulo="Editar Reloj";
     this.auto=new Auto('','','','',52,"");
     this.autoGuardar=new Auto('','','','',41,"");
     this.archivosParaCargar=[];
